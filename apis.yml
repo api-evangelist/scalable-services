@@ -1,175 +1,185 @@
 name: Scalable Services
-description: A collection of APIs for building and managing scalable cloud services
+description: >-
+  A collection of APIs for building and managing scalable cloud services.
 image: https://example.com/scalable-services-logo.png
 url: https://scalableservices.example.com
 created: '2024-01-15'
 modified: '2024-01-15'
 apis:
-- name: Compute API
-  description: Manage virtual machines, containers, and serverless functions
-  image: https://example.com/compute-api-icon.png
-  humanURL: https://scalableservices.example.com/compute
-  baseURL: https://api.scalableservices.example.com/v1/compute
-  tags:
-  - compute
-  - virtual machines
-  - containers
-  - serverless
-  properties:
-  - type: Documentation
-    url: https://docs.scalableservices.example.com/compute
-  - type: OpenAPI
-    url: https://api.scalableservices.example.com/specs/compute-openapi.json
-  - type: Swagger
-    url: https://api.scalableservices.example.com/specs/compute-swagger.json
-  - type: Authentication
-    url: https://docs.scalableservices.example.com/compute/authentication
-  - type: Pricing
-    url: https://scalableservices.example.com/pricing/compute
-  - type: Rate Limits
-    url: https://docs.scalableservices.example.com/compute/rate-limits
-  contact:
-  - type: Support
-    url: https://support.scalableservices.example.com/compute
-  - type: Email
-    url: mailto:compute-support@scalableservices.example.com
-- name: Storage API
-  description: Object storage, block storage, and file system management
-  image: https://example.com/storage-api-icon.png
-  humanURL: https://scalableservices.example.com/storage
-  baseURL: https://api.scalableservices.example.com/v1/storage
-  tags:
-  - storage
-  - object storage
-  - block storage
-  - files
-  properties:
-  - type: Documentation
-    url: https://docs.scalableservices.example.com/storage
-  - type: OpenAPI
-    url: https://api.scalableservices.example.com/specs/storage-openapi.json
-  - type: Swagger
-    url: https://api.scalableservices.example.com/specs/storage-swagger.json
-  - type: Authentication
-    url: https://docs.scalableservices.example.com/storage/authentication
-  - type: Pricing
-    url: https://scalableservices.example.com/pricing/storage
-  - type: SDK
-    url: https://github.com/scalableservices/storage-sdk
-  contact:
-  - type: Support
-    url: https://support.scalableservices.example.com/storage
-  - type: Email
-    url: mailto:storage-support@scalableservices.example.com
-- name: Database API
-  description: Managed relational and NoSQL database services
-  image: https://example.com/database-api-icon.png
-  humanURL: https://scalableservices.example.com/database
-  baseURL: https://api.scalableservices.example.com/v1/database
-  tags:
-  - database
-  - sql
-  - nosql
-  - managed database
-  properties:
-  - type: Documentation
-    url: https://docs.scalableservices.example.com/database
-  - type: OpenAPI
-    url: https://api.scalableservices.example.com/specs/database-openapi.json
-  - type: Authentication
-    url: https://docs.scalableservices.example.com/database/authentication
-  - type: Pricing
-    url: https://scalableservices.example.com/pricing/database
-  - type: Tutorials
-    url: https://docs.scalableservices.example.com/database/tutorials
-  contact:
-  - type: Support
-    url: https://support.scalableservices.example.com/database
-  - type: Email
-    url: mailto:database-support@scalableservices.example.com
-- name: Load Balancer API
-  description: Distribute traffic across multiple compute instances
-  image: https://example.com/loadbalancer-api-icon.png
-  humanURL: https://scalableservices.example.com/loadbalancer
-  baseURL: https://api.scalableservices.example.com/v1/loadbalancer
-  tags:
-  - load balancing
-  - traffic management
-  - high availability
-  properties:
-  - type: Documentation
-    url: https://docs.scalableservices.example.com/loadbalancer
-  - type: OpenAPI
-    url: https://api.scalableservices.example.com/specs/loadbalancer-openapi.json
-  - type: Authentication
-    url: https://docs.scalableservices.example.com/loadbalancer/authentication
-  - type: Pricing
-    url: https://scalableservices.example.com/pricing/loadbalancer
-  contact:
-  - type: Support
-    url: https://support.scalableservices.example.com/loadbalancer
-  - type: Email
-    url: mailto:loadbalancer-support@scalableservices.example.com
-- name: Monitoring API
-  description: Monitor resources, collect metrics, and set up alerts
-  image: https://example.com/monitoring-api-icon.png
-  humanURL: https://scalableservices.example.com/monitoring
-  baseURL: https://api.scalableservices.example.com/v1/monitoring
-  tags:
-  - monitoring
-  - metrics
-  - alerts
-  - observability
-  properties:
-  - type: Documentation
-    url: https://docs.scalableservices.example.com/monitoring
-  - type: OpenAPI
-    url: https://api.scalableservices.example.com/specs/monitoring-openapi.json
-  - type: Authentication
-    url: https://docs.scalableservices.example.com/monitoring/authentication
-  - type: Pricing
-    url: https://scalableservices.example.com/pricing/monitoring
-  - type: Webhooks
-    url: https://docs.scalableservices.example.com/monitoring/webhooks
-  contact:
-  - type: Support
-    url: https://support.scalableservices.example.com/monitoring
-  - type: Email
-    url: mailto:monitoring-support@scalableservices.example.com
+  - name: Compute API
+    description: >-
+      Manage virtual machines, containers, and serverless functions.
+    image: https://example.com/compute-api-icon.png
+    humanURL: https://scalableservices.example.com/compute
+    baseURL: https://api.scalableservices.example.com/v1/compute
+    tags:
+      - compute
+      - virtual machines
+      - containers
+      - serverless
+    properties:
+      - type: Documentation
+        url: https://docs.scalableservices.example.com/compute
+      - type: OpenAPI
+        url: https://api.scalableservices.example.com/specs/compute-openapi.json
+      - type: Swagger
+        url: https://api.scalableservices.example.com/specs/compute-swagger.json
+      - type: Authentication
+        url: https://docs.scalableservices.example.com/compute/authentication
+      - type: Pricing
+        url: https://scalableservices.example.com/pricing/compute
+      - type: Rate Limits
+        url: https://docs.scalableservices.example.com/compute/rate-limits
+    contact:
+      - type: Support
+        url: https://support.scalableservices.example.com/compute
+      - type: Email
+        url: mailto:compute-support@scalableservices.example.com
+  - name: Storage API
+    description: >-
+      Object storage, block storage, and file system management.
+    image: https://example.com/storage-api-icon.png
+    humanURL: https://scalableservices.example.com/storage
+    baseURL: https://api.scalableservices.example.com/v1/storage
+    tags:
+      - storage
+      - object storage
+      - block storage
+      - files
+    properties:
+      - type: Documentation
+        url: https://docs.scalableservices.example.com/storage
+      - type: OpenAPI
+        url: https://api.scalableservices.example.com/specs/storage-openapi.json
+      - type: Swagger
+        url: https://api.scalableservices.example.com/specs/storage-swagger.json
+      - type: Authentication
+        url: https://docs.scalableservices.example.com/storage/authentication
+      - type: Pricing
+        url: https://scalableservices.example.com/pricing/storage
+      - type: SDK
+        url: https://github.com/scalableservices/storage-sdk
+    contact:
+      - type: Support
+        url: https://support.scalableservices.example.com/storage
+      - type: Email
+        url: mailto:storage-support@scalableservices.example.com
+  - name: Database API
+    description: >-
+      Managed relational and NoSQL database services.
+    image: https://example.com/database-api-icon.png
+    humanURL: https://scalableservices.example.com/database
+    baseURL: https://api.scalableservices.example.com/v1/database
+    tags:
+      - database
+      - sql
+      - nosql
+      - managed database
+    properties:
+      - type: Documentation
+        url: https://docs.scalableservices.example.com/database
+      - type: OpenAPI
+        url: 
+          https://api.scalableservices.example.com/specs/database-openapi.json
+      - type: Authentication
+        url: https://docs.scalableservices.example.com/database/authentication
+      - type: Pricing
+        url: https://scalableservices.example.com/pricing/database
+      - type: Tutorials
+        url: https://docs.scalableservices.example.com/database/tutorials
+    contact:
+      - type: Support
+        url: https://support.scalableservices.example.com/database
+      - type: Email
+        url: mailto:database-support@scalableservices.example.com
+  - name: Load Balancer API
+    description: >-
+      Distribute traffic across multiple compute instances.
+    image: https://example.com/loadbalancer-api-icon.png
+    humanURL: https://scalableservices.example.com/loadbalancer
+    baseURL: https://api.scalableservices.example.com/v1/loadbalancer
+    tags:
+      - load balancing
+      - traffic management
+      - high availability
+    properties:
+      - type: Documentation
+        url: https://docs.scalableservices.example.com/loadbalancer
+      - type: OpenAPI
+        url: 
+          https://api.scalableservices.example.com/specs/loadbalancer-openapi.json
+      - type: Authentication
+        url: 
+          https://docs.scalableservices.example.com/loadbalancer/authentication
+      - type: Pricing
+        url: https://scalableservices.example.com/pricing/loadbalancer
+    contact:
+      - type: Support
+        url: https://support.scalableservices.example.com/loadbalancer
+      - type: Email
+        url: mailto:loadbalancer-support@scalableservices.example.com
+  - name: Monitoring API
+    description: >-
+      Monitor resources, collect metrics, and set up alerts.
+    image: https://example.com/monitoring-api-icon.png
+    humanURL: https://scalableservices.example.com/monitoring
+    baseURL: https://api.scalableservices.example.com/v1/monitoring
+    tags:
+      - monitoring
+      - metrics
+      - alerts
+      - observability
+    properties:
+      - type: Documentation
+        url: https://docs.scalableservices.example.com/monitoring
+      - type: OpenAPI
+        url: 
+          https://api.scalableservices.example.com/specs/monitoring-openapi.json
+      - type: Authentication
+        url: https://docs.scalableservices.example.com/monitoring/authentication
+      - type: Pricing
+        url: https://scalableservices.example.com/pricing/monitoring
+      - type: Webhooks
+        url: https://docs.scalableservices.example.com/monitoring/webhooks
+    contact:
+      - type: Support
+        url: https://support.scalableservices.example.com/monitoring
+      - type: Email
+        url: mailto:monitoring-support@scalableservices.example.com
 common:
-- type: Portal
-  url: https://portal.scalableservices.example.com
-- type: Documentation
-  url: https://docs.scalableservices.example.com
-- type: Getting Started
-  url: https://docs.scalableservices.example.com/getting-started
-- type: Authentication
-  url: https://docs.scalableservices.example.com/authentication
-- type: Status Page
-  url: https://status.scalableservices.example.com
-- type: Blog
-  url: https://blog.scalableservices.example.com
-- type: Pricing
-  url: https://scalableservices.example.com/pricing
-- type: Terms of Service
-  url: https://scalableservices.example.com/terms
-- type: Privacy Policy
-  url: https://scalableservices.example.com/privacy
-- type: GitHub
-  url: https://github.com/scalableservices
-- type: Twitter
-  url: https://twitter.com/scalableservices
-- type: LinkedIn
-  url: https://linkedin.com/company/scalableservices
+  - type: Portal
+    url: https://portal.scalableservices.example.com
+  - type: Documentation
+    url: https://docs.scalableservices.example.com
+  - type: Getting Started
+    url: https://docs.scalableservices.example.com/getting-started
+  - type: Authentication
+    url: https://docs.scalableservices.example.com/authentication
+  - type: Status Page
+    url: https://status.scalableservices.example.com
+  - type: Blog
+    url: https://blog.scalableservices.example.com
+  - type: Pricing
+    url: https://scalableservices.example.com/pricing
+  - type: Terms of Service
+    url: https://scalableservices.example.com/terms
+  - type: Privacy Policy
+    url: https://scalableservices.example.com/privacy
+  - type: GitHub
+    url: https://github.com/scalableservices
+  - type: Twitter
+    url: https://twitter.com/scalableservices
+  - type: LinkedIn
+    url: https://linkedin.com/company/scalableservices
 maintainers:
-- name: Scalable Services API Team
-  email: api-team@scalableservices.example.com
-  url: https://scalableservices.example.com/about
-  twitter: '@scalableservices'
+  - name: Scalable Services API Team
+    email: api-team@scalableservices.example.com
+    url: https://scalableservices.example.com/about
+    twitter: '@scalableservices'
 tags:
-- cloud services
-- scalable infrastructure
-- API
-- compute
-- storage
-- database
+  - cloud services
+  - scalable infrastructure
+  - API
+  - compute
+  - storage
+  - database
