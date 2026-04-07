@@ -13,10 +13,10 @@ apis:
     humanURL: https://scalableservices.example.com/compute
     baseURL: https://api.scalableservices.example.com/v1/compute
     tags:
-      - compute
-      - virtual machines
-      - containers
-      - serverless
+      - Compute
+      - Containers
+      - Serverless
+      - Virtual Machines
     properties:
       - type: Documentation
         url: https://docs.scalableservices.example.com/compute
@@ -42,10 +42,10 @@ apis:
     humanURL: https://scalableservices.example.com/storage
     baseURL: https://api.scalableservices.example.com/v1/storage
     tags:
-      - storage
-      - object storage
-      - block storage
-      - files
+      - Block Storage
+      - Files
+      - Object Storage
+      - Storage
     properties:
       - type: Documentation
         url: https://docs.scalableservices.example.com/storage
@@ -71,16 +71,15 @@ apis:
     humanURL: https://scalableservices.example.com/database
     baseURL: https://api.scalableservices.example.com/v1/database
     tags:
-      - database
-      - sql
-      - nosql
-      - managed database
+      - Database
+      - Managed Database
+      - Nosql
+      - Sql
     properties:
       - type: Documentation
         url: https://docs.scalableservices.example.com/database
       - type: OpenAPI
-        url: 
-          https://api.scalableservices.example.com/specs/database-openapi.json
+        url: https://api.scalableservices.example.com/specs/database-openapi.json
       - type: Authentication
         url: https://docs.scalableservices.example.com/database/authentication
       - type: Pricing
@@ -99,18 +98,16 @@ apis:
     humanURL: https://scalableservices.example.com/loadbalancer
     baseURL: https://api.scalableservices.example.com/v1/loadbalancer
     tags:
-      - load balancing
-      - traffic management
-      - high availability
+      - High Availability
+      - Load Balancing
+      - Traffic Management
     properties:
       - type: Documentation
         url: https://docs.scalableservices.example.com/loadbalancer
       - type: OpenAPI
-        url: 
-          https://api.scalableservices.example.com/specs/loadbalancer-openapi.json
+        url: https://api.scalableservices.example.com/specs/loadbalancer-openapi.json
       - type: Authentication
-        url: 
-          https://docs.scalableservices.example.com/loadbalancer/authentication
+        url: https://docs.scalableservices.example.com/loadbalancer/authentication
       - type: Pricing
         url: https://scalableservices.example.com/pricing/loadbalancer
     contact:
@@ -125,16 +122,15 @@ apis:
     humanURL: https://scalableservices.example.com/monitoring
     baseURL: https://api.scalableservices.example.com/v1/monitoring
     tags:
-      - monitoring
-      - metrics
-      - alerts
-      - observability
+      - Alerts
+      - Metrics
+      - Monitoring
+      - Observability
     properties:
       - type: Documentation
         url: https://docs.scalableservices.example.com/monitoring
       - type: OpenAPI
-        url: 
-          https://api.scalableservices.example.com/specs/monitoring-openapi.json
+        url: https://api.scalableservices.example.com/specs/monitoring-openapi.json
       - type: Authentication
         url: https://docs.scalableservices.example.com/monitoring/authentication
       - type: Pricing
@@ -177,9 +173,8 @@ maintainers:
     url: https://scalableservices.example.com/about
     twitter: '@scalableservices'
 tags:
-  - cloud services
-  - scalable infrastructure
-  - API
-  - compute
-  - storage
-  - database
+  - Cloud Services
+  - Compute
+  - Database
+  - Scalable Infrastructure
+  - Storage
