@@ -200,6 +200,9 @@ common:
   - type: Examples
     url: https://github.com/api-evangelist/scalable-services/blob/main/examples/scalable-services-kubernetes-hpa-example.json
     name: Kubernetes HPA Example
+  - type: Examples
+    url: https://github.com/api-evangelist/scalable-services/blob/main/examples/scalable-services-kong-plugin-example.json
+    name: Kong Rate Limiting Plugin Example
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

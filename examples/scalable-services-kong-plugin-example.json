@@ -1,0 +1,55 @@
+{
+  "example": {
+    "title": "Kong API Gateway Rate Limiting Plugin",
+    "description": "Example Kong Admin API call to add a rate limiting plugin to a service, protecting a scalable microservice from traffic spikes.",
+    "request": {
+      "method": "POST",
+      "url": "http://localhost:8001/services/payment-service/plugins",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "rate-limiting",
+        "config": {
+          "second": 100,
+          "minute": 2000,
+          "hour": 50000,
+          "policy": "local",
+          "limit_by": "consumer",
+          "fault_tolerant": true,
+          "hide_client_headers": false,
+          "redis_ssl": false,
+          "redis_ssl_verify": false
+        }
+      }
+    },
+    "response": {
+      "status": 201,
+      "body": {
+        "id": "8d9f3e2a-1b4c-5d6e-7f8a-9b0c1d2e3f4a",
+        "name": "rate-limiting",
+        "service": {
+          "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+        },
+        "consumer": null,
+        "route": null,
+        "enabled": true,
+        "protocols": ["grpc", "grpcs", "http", "https"],
+        "config": {
+          "second": 100,
+          "minute": 2000,
+          "hour": 50000,
+          "day": null,
+          "month": null,
+          "year": null,
+          "policy": "local",
+          "limit_by": "consumer",
+          "fault_tolerant": true,
+          "hide_client_headers": false
+        },
+        "created_at": 1717286400,
+        "updated_at": 1717286400
+      }
+    }
+  }
+}

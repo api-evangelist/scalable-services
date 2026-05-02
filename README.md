@@ -71,6 +71,7 @@ gRPC server reflection for discovery and dynamic invocation. Widely used for hig
 
 ### Examples
 - [Kubernetes HPA Example](examples/scalable-services-kubernetes-hpa-example.json) — Kubernetes Horizontal Pod Autoscaler configuration for a scalable microservice.
+- [Kong Rate Limiting Plugin](examples/scalable-services-kong-plugin-example.json) — Kong Admin API call to apply a rate limiting plugin protecting a scalable microservice from traffic spikes.
 
 ## Common Resources
 
