@@ -1,0 +1,168 @@
+vocabulary:
+  name: Scalable Services Vocabulary
+  description: >-
+    Domain vocabulary for designing and operating scalable services, covering
+    architectural patterns, infrastructure components, and operational concepts
+    used by platform engineers and cloud architects.
+  created: '2026-05-02'
+  modified: '2026-05-02'
+  terms:
+    - term: API Gateway
+      definition: >-
+        A server that acts as the single entry point for all client requests,
+        routing them to the appropriate downstream microservice. Handles
+        cross-cutting concerns like authentication, rate limiting, load
+        balancing, and logging. Examples: Kong, NGINX, AWS API Gateway, Envoy.
+      tags:
+        - Architecture
+        - Infrastructure
+    - term: Auto Scaling
+      definition: >-
+        The ability of a system to automatically add or remove compute capacity
+        (instances, containers, functions) in response to changes in demand.
+        Horizontal scaling adds more instances; vertical scaling increases
+        instance size.
+      tags:
+        - Infrastructure
+        - Operations
+    - term: Circuit Breaker
+      definition: >-
+        A fault tolerance pattern that prevents cascading failures in distributed
+        systems by temporarily blocking requests to a failing service and
+        allowing it time to recover. States include Closed, Open, and Half-Open.
+      tags:
+        - Architecture
+        - Resilience
+    - term: Container
+      definition: >-
+        A lightweight, portable unit of software that packages code and its
+        dependencies, enabling consistent deployment across environments.
+        Docker is the dominant container runtime; Kubernetes orchestrates
+        containers at scale.
+      tags:
+        - Infrastructure
+        - Runtime
+    - term: Container Orchestration
+      definition: >-
+        Automated management of containerized workloads across a cluster,
+        including scheduling, scaling, self-healing, service discovery, and
+        rolling updates. Kubernetes is the dominant container orchestration
+        platform.
+      tags:
+        - Infrastructure
+        - Kubernetes
+    - term: Horizontal Pod Autoscaler (HPA)
+      definition: >-
+        A Kubernetes controller that automatically scales the number of pod
+        replicas in a deployment based on CPU utilization, memory, or custom
+        metrics from Prometheus or an external metrics adapter.
+      tags:
+        - Kubernetes
+        - Scaling
+    - term: Health Check
+      definition: >-
+        An endpoint (typically /health, /healthz, or /ready) that reports
+        whether a service instance is alive and ready to accept traffic.
+        Used by load balancers and orchestrators to route traffic away from
+        unhealthy instances.
+      tags:
+        - Operations
+        - Resilience
+    - term: Idempotency
+      definition: >-
+        A property of an operation where applying it multiple times has the
+        same effect as applying it once. GET, PUT, and DELETE are idempotent
+        HTTP methods. Critical for retry logic in distributed systems.
+      tags:
+        - API Design
+        - Resilience
+    - term: Load Balancer
+      definition: >-
+        A device or software that distributes incoming network traffic across
+        multiple backend servers to maximize throughput, minimize response
+        time, and avoid overloading any single resource. Layer 4 (TCP/UDP)
+        and Layer 7 (HTTP/HTTPS) load balancers serve different use cases.
+      tags:
+        - Infrastructure
+        - Traffic Management
+    - term: Microservice
+      definition: >-
+        An architectural style where an application is built as a collection
+        of small, independently deployable services, each running its own
+        process and communicating via lightweight HTTP or messaging protocols.
+        Each service owns its data and can be scaled independently.
+      tags:
+        - Architecture
+        - Design Pattern
+    - term: Rate Limiting
+      definition: >-
+        A technique for controlling the rate of requests sent to or received
+        from an API. Protects services from being overwhelmed by too many
+        requests, commonly expressed as requests per second/minute/hour.
+        Implemented at the API gateway or application layer.
+      tags:
+        - API Design
+        - Operations
+    - term: Retry Policy
+      definition: >-
+        A configuration that determines how many times a client should retry
+        a failed request, with what backoff strategy (fixed, exponential),
+        and under what conditions (transient errors, timeouts). Essential
+        for resilience in distributed systems.
+      tags:
+        - Architecture
+        - Resilience
+    - term: Service Discovery
+      definition: >-
+        The process by which services automatically detect and connect to
+        each other in a dynamic environment where instances are frequently
+        added, removed, or rescheduled. Can be client-side (Consul, Eureka)
+        or server-side (Kubernetes DNS, Envoy).
+      tags:
+        - Architecture
+        - Infrastructure
+    - term: Service Mesh
+      definition: >-
+        A dedicated infrastructure layer for handling service-to-service
+        communication, providing features like mutual TLS, traffic management,
+        observability, and circuit breaking without application code changes.
+        Examples: Istio, Linkerd, Consul Connect.
+      tags:
+        - Architecture
+        - Infrastructure
+    - term: Serverless
+      definition: >-
+        A cloud execution model where the cloud provider dynamically manages
+        the allocation and provisioning of servers. Code runs in stateless
+        functions triggered by events. Auto-scales to zero when idle.
+        Examples: AWS Lambda, Google Cloud Functions, Azure Functions.
+      tags:
+        - Architecture
+        - Cloud
+    - term: Sidecar Pattern
+      definition: >-
+        A design pattern where a secondary container (sidecar) is deployed
+        alongside a primary application container in the same pod/host,
+        providing supplementary services like proxy, logging, monitoring,
+        or configuration without modifying the main application.
+      tags:
+        - Architecture
+        - Design Pattern
+    - term: Twelve-Factor App
+      definition: >-
+        A methodology for building scalable, maintainable SaaS applications,
+        defined by twelve principles including: codebase in version control,
+        explicit dependency declaration, config in environment variables,
+        stateless processes, and disposability.
+      tags:
+        - Architecture
+        - Best Practice
+    - term: Zero Downtime Deployment
+      definition: >-
+        A deployment strategy that ensures no interruption of service during
+        updates. Techniques include rolling updates, blue/green deployments,
+        and canary releases. Enabled by container orchestration platforms
+        like Kubernetes.
+      tags:
+        - Operations
+        - Deployment

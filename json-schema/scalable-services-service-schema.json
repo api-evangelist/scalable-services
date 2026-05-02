@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api-evangelist.com/schemas/scalable-services/service",
+  "title": "Scalable Service",
+  "description": "Schema representing a scalable cloud service with configuration for scaling, load balancing, health checks, and observability.",
+  "type": "object",
+  "required": ["name", "type", "baseUrl"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the service.",
+      "example": "Payment Processing Service"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["microservice", "serverless", "container", "api-gateway", "service-mesh", "load-balancer"],
+      "description": "The type of scalable service."
+    },
+    "baseUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "Base URL of the service API."
+    },
+    "healthEndpoint": {
+      "type": "string",
+      "description": "Relative path for health/readiness check endpoint.",
+      "example": "/healthz"
+    },
+    "metricsEndpoint": {
+      "type": "string",
+      "description": "Relative path for Prometheus-compatible metrics endpoint.",
+      "example": "/metrics"
+    },
+    "scalingPolicy": {
+      "type": "object",
+      "description": "Auto-scaling configuration for the service.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["horizontal", "vertical", "both"],
+          "description": "Scaling axis."
+        },
+        "minReplicas": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Minimum number of running replicas (0 = scale to zero)."
+        },
+        "maxReplicas": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Maximum number of replicas."
+        },
+        "targetCPUPercent": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "description": "Target CPU utilization percentage for horizontal scaling trigger."
+        },
+        "scaleToZero": {
+          "type": "boolean",
+          "description": "Whether the service can scale to zero replicas when idle (serverless)."
+        }
+      }
+    },
+    "loadBalancing": {
+      "type": "object",
+      "description": "Load balancing configuration.",
+      "properties": {
+        "algorithm": {
+          "type": "string",
+          "enum": ["round-robin", "least-connections", "ip-hash", "random", "weighted"],
+          "description": "Load balancing algorithm."
+        },
+        "healthCheckIntervalSeconds": {
+          "type": "integer",
+          "description": "Interval in seconds between health checks."
+        },
+        "stickySession": {
+          "type": "boolean",
+          "description": "Whether session affinity (sticky sessions) is enabled."
+        }
+      }
+    },
+    "rateLimiting": {
+      "type": "object",
+      "description": "Rate limiting configuration.",
+      "properties": {
+        "requestsPerSecond": {
+          "type": "integer",
+          "description": "Maximum requests per second per client."
+        },
+        "requestsPerMinute": {
+          "type": "integer",
+          "description": "Maximum requests per minute per client."
+        },
+        "strategy": {
+          "type": "string",
+          "enum": ["token-bucket", "sliding-window", "fixed-window"],
+          "description": "Rate limiting algorithm."
+        }
+      }
+    },
+    "circuitBreaker": {
+      "type": "object",
+      "description": "Circuit breaker configuration for fault tolerance.",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "failureThreshold": {
+          "type": "number",
+          "description": "Failure rate (0-1) at which circuit opens."
+        },
+        "timeoutSeconds": {
+          "type": "integer",
+          "description": "Time circuit remains open before half-open probe."
+        }
+      }
+    },
+    "observability": {
+      "type": "object",
+      "description": "Observability configuration.",
+      "properties": {
+        "tracingEnabled": {
+          "type": "boolean"
+        },
+        "tracingBackend": {
+          "type": "string",
+          "enum": ["jaeger", "zipkin", "opentelemetry", "datadog", "honeycomb"],
+          "description": "Distributed tracing backend."
+        },
+        "loggingFormat": {
+          "type": "string",
+          "enum": ["json", "logfmt", "text"],
+          "description": "Structured logging format."
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Classification tags for the service."
+    }
+  }
+}

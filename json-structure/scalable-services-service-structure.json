@@ -1,0 +1,68 @@
+{
+  "structure": {
+    "name": "Scalable Service",
+    "description": "The structural representation of a scalable cloud service configuration.",
+    "fields": [
+      { "name": "name", "type": "string", "required": true, "description": "Service name" },
+      { "name": "type", "type": "enum[microservice,serverless,container,api-gateway,service-mesh,load-balancer]", "required": true, "description": "Service type" },
+      { "name": "baseUrl", "type": "uri", "required": true, "description": "Service base URL" },
+      { "name": "healthEndpoint", "type": "string", "required": false, "description": "Health check path" },
+      { "name": "metricsEndpoint", "type": "string", "required": false, "description": "Prometheus metrics path" },
+      {
+        "name": "scalingPolicy",
+        "type": "object",
+        "required": false,
+        "description": "Auto-scaling configuration",
+        "fields": [
+          { "name": "type", "type": "enum[horizontal,vertical,both]", "required": false },
+          { "name": "minReplicas", "type": "integer", "required": false },
+          { "name": "maxReplicas", "type": "integer", "required": false },
+          { "name": "targetCPUPercent", "type": "integer", "required": false },
+          { "name": "scaleToZero", "type": "boolean", "required": false }
+        ]
+      },
+      {
+        "name": "loadBalancing",
+        "type": "object",
+        "required": false,
+        "description": "Load balancing configuration",
+        "fields": [
+          { "name": "algorithm", "type": "enum[round-robin,least-connections,ip-hash,random,weighted]", "required": false },
+          { "name": "healthCheckIntervalSeconds", "type": "integer", "required": false },
+          { "name": "stickySession", "type": "boolean", "required": false }
+        ]
+      },
+      {
+        "name": "rateLimiting",
+        "type": "object",
+        "required": false,
+        "fields": [
+          { "name": "requestsPerSecond", "type": "integer", "required": false },
+          { "name": "requestsPerMinute", "type": "integer", "required": false },
+          { "name": "strategy", "type": "enum[token-bucket,sliding-window,fixed-window]", "required": false }
+        ]
+      },
+      {
+        "name": "circuitBreaker",
+        "type": "object",
+        "required": false,
+        "fields": [
+          { "name": "enabled", "type": "boolean", "required": false },
+          { "name": "failureThreshold", "type": "number", "required": false },
+          { "name": "timeoutSeconds", "type": "integer", "required": false }
+        ]
+      },
+      {
+        "name": "observability",
+        "type": "object",
+        "required": false,
+        "fields": [
+          { "name": "tracingEnabled", "type": "boolean", "required": false },
+          { "name": "tracingBackend", "type": "enum[jaeger,zipkin,opentelemetry,datadog,honeycomb]", "required": false },
+          { "name": "loggingFormat", "type": "enum[json,logfmt,text]", "required": false }
+        ]
+      },
+      { "name": "tags", "type": "array<string>", "required": false }
+    ]
+  }
+}

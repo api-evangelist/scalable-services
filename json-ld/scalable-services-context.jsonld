@@ -1,0 +1,47 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://schema.org/",
+    "api": "https://api-evangelist.com/vocabulary/",
+    "svc": "https://api-evangelist.com/vocabulary/scalable-services/",
+
+    "ScalableService": "svc:ScalableService",
+    "APIGateway": "svc:APIGateway",
+    "LoadBalancer": "svc:LoadBalancer",
+    "ServiceMesh": "svc:ServiceMesh",
+    "Container": "svc:Container",
+    "Microservice": "svc:Microservice",
+    "ServerlessFunction": "svc:ServerlessFunction",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "documentation": "schema:documentation",
+    "version": "schema:version",
+    "license": "schema:license",
+    "provider": "schema:provider",
+    "dateCreated": "schema:dateCreated",
+    "dateModified": "schema:dateModified",
+
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "SoftwareSourceCode": "schema:SoftwareSourceCode",
+    "WebAPI": "schema:WebAPI",
+    "TechArticle": "schema:TechArticle",
+
+    "baseUrl": "api:baseUrl",
+    "apiType": "api:apiType",
+    "authType": "api:authType",
+    "tags": "api:tags",
+    "healthEndpoint": "svc:healthEndpoint",
+    "scalingPolicy": "svc:scalingPolicy",
+    "replicaCount": "svc:replicaCount",
+    "targetCPUPercent": "svc:targetCPUPercent",
+    "loadBalancingAlgorithm": "svc:loadBalancingAlgorithm",
+    "circuitBreakerEnabled": "svc:circuitBreakerEnabled",
+    "rateLimitPerSecond": "svc:rateLimitPerSecond",
+    "retryPolicy": "svc:retryPolicy",
+    "serviceDiscovery": "svc:serviceDiscovery",
+    "metricsEndpoint": "svc:metricsEndpoint",
+    "tracingEnabled": "svc:tracingEnabled"
+  }
+}
