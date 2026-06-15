@@ -1,0 +1,479 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Kubernetes Core API (v1)",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Pods",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all pods in the cluster",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/pods"
+          },
+          "docs": "List all pods in the cluster"
+        },
+        {
+          "info": {
+            "name": "List pods in a namespace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/pods",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List pods in a namespace"
+        },
+        {
+          "info": {
+            "name": "Create a pod",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/pods",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a pod"
+        },
+        {
+          "info": {
+            "name": "Read a pod",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/pods/:name",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Read a pod"
+        },
+        {
+          "info": {
+            "name": "Replace a pod",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/pods/:name",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Replace a pod"
+        },
+        {
+          "info": {
+            "name": "Delete a pod",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/pods/:name",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a pod"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Namespaces",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List namespaces",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces"
+          },
+          "docs": "List namespaces"
+        },
+        {
+          "info": {
+            "name": "Create a namespace",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a namespace"
+        },
+        {
+          "info": {
+            "name": "Read a namespace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:name",
+            "params": [
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Read a namespace"
+        },
+        {
+          "info": {
+            "name": "Delete a namespace",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:name",
+            "params": [
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a namespace"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Services",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List services in a namespace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/services",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List services in a namespace"
+        },
+        {
+          "info": {
+            "name": "Create a service",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/services",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a service"
+        },
+        {
+          "info": {
+            "name": "Read a service",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/services/:name",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Read a service"
+        },
+        {
+          "info": {
+            "name": "Delete a service",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/services/:name",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a service"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "ConfigMaps",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List configmaps in a namespace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/configmaps",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List configmaps in a namespace"
+        },
+        {
+          "info": {
+            "name": "Create a configmap",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/configmaps",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a configmap"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Secrets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List secrets in a namespace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/secrets",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List secrets in a namespace"
+        },
+        {
+          "info": {
+            "name": "Create a secret",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://kubernetes.default.svc/api/v1/namespaces/:namespace/secrets",
+            "params": [
+              {
+                "name": "namespace",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a secret"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Nodes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List nodes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/nodes"
+          },
+          "docs": "List nodes"
+        },
+        {
+          "info": {
+            "name": "Read a node",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/nodes/:name",
+            "params": [
+              {
+                "name": "name",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Read a node"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "PersistentVolumes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List persistent volumes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://kubernetes.default.svc/api/v1/persistentvolumes"
+          },
+          "docs": "List persistent volumes"
+        },
+        {
+          "info": {
+            "name": "Create a persistent volume",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://kubernetes.default.svc/api/v1/persistentvolumes",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a persistent volume"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
