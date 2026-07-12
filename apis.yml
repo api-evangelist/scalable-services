@@ -170,6 +170,12 @@ apis:
       - type: GitHub
         url: https://github.com/grpc/grpc
 common:
+  - type: VulnerabilityDisclosure
+    url: security/scalable-services-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/scalable-services-domain-security.yml
+  - type: Authentication
+    url: authentication/scalable-services-authentication.yml
   - type: Documentation
     url: https://kubernetes.io/docs/concepts/architecture/
     name: Kubernetes Architecture Concepts
