@@ -170,6 +170,8 @@ apis:
       - type: GitHub
         url: https://github.com/grpc/grpc
 common:
+  - type: AgenticAccess
+    url: agentic-access/scalable-services-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/scalable-services-vulnerability-disclosure.yml
   - type: DomainSecurity
