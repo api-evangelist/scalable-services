@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: Kubernetes Core API (v1) ConfigMaps PersistentVolumes API
+  description: 'The Kubernetes API is served by the kube-apiserver and exposes a uniform,
+
+    versioned REST surface for cluster resources. This OpenAPI is a hand-curated
+
+    subset of the core/v1 group covering the most common workloads — pods,
+
+    namespaces, services, configmaps, secrets, nodes, and persistent volumes.
+
+    Authentication is per-cluster (bearer tokens, client certs, OIDC). The base
+
+    URL is the API server endpoint of a given cluster (no single public base).
+
+    This file is an API Evangelist research artifact for the scalable-services
+
+    topic.
+
+    '
+  version: 1.0.0
+  contact:
+    name: API Evangelist
+    url: https://apievangelist.com
+servers:
+- url: https://kubernetes.default.svc
+  description: In-cluster API server
+- url: https://{cluster}:6443
+  description: External cluster endpoint
+  variables:
+    cluster:
+      default: localhost
+      description: Cluster API server hostname
+security:
+- BearerAuth: []
+tags:
+- name: PersistentVolumes
+paths:
+  /api/v1/persistentvolumes:
+    get:
+      summary: List persistent volumes
+      operationId: listPersistentVolumes
+      tags:
+      - PersistentVolumes
+      responses:
+        '200':
+          description: PV list.
+    post:
+      summary: Create a persistent volume
+      operationId: createPersistentVolume
+      tags:
+      - PersistentVolumes
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: PV created.
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: ServiceAccountToken
