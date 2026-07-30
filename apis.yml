@@ -8,7 +8,20 @@ description: >-
   enable services to scale horizontally and vertically. Relevant to platform
   engineers, cloud architects, and backend developers building high-traffic,
   distributed systems.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/scalable-services.png
 tags:
   - API Gateway
   - Cloud Native
@@ -26,149 +39,226 @@ created: '2025-01-15'
 modified: '2026-05-02'
 specificationVersion: '0.19'
 apis:
-  - aid: scalable-services:kubernetes
-    name: Kubernetes API
-    description: >-
-      The Kubernetes API enables programmatic management of containerized
-      workloads, including deployments, services, pods, config maps, and
-      horizontal pod autoscalers. Core to running scalable microservices
-      infrastructure.
-    tags:
-      - Containers
-      - Kubernetes
-      - Orchestration
-      - Scalable Architecture
-    humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
-    properties:
-      - type: Documentation
-        url: https://kubernetes.io/docs/reference/kubernetes-api/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/swagger.json
-      - type: GettingStarted
-        url: https://kubernetes.io/docs/home/
-      - type: GitHub
-        url: https://github.com/kubernetes/kubernetes
-  - aid: scalable-services:envoy-admin
-    name: Envoy Admin API
-    description: >-
-      Envoy Proxy's administration API for inspecting and modifying Envoy
-      runtime configuration, stats, clusters, and listeners. Envoy is the
-      foundational data plane for many service mesh and API gateway deployments.
-    tags:
-      - API Gateway
-      - Load Balancing
-      - Proxy
-      - Service Mesh
-    humanURL: https://www.envoyproxy.io/docs/envoy/latest/operations/admin
-    properties:
-      - type: Documentation
-        url: https://www.envoyproxy.io/docs/envoy/latest/operations/admin
-      - type: GitHub
-        url: https://github.com/envoyproxy/envoy
-  - aid: scalable-services:istio
-    name: Istio API
-    description: >-
-      Istio's configuration APIs define traffic management, security policy,
-      and observability for microservice meshes. Expressed as Kubernetes CRDs
-      (VirtualService, DestinationRule, Gateway, etc.).
-    tags:
-      - Kubernetes
-      - Microservices
-      - Observability
-      - Security
-      - Service Mesh
-    humanURL: https://istio.io/latest/docs/reference/config/
-    properties:
-      - type: Documentation
-        url: https://istio.io/latest/docs/reference/config/
-      - type: GitHub
-        url: https://github.com/istio/istio
-  - aid: scalable-services:aws-lambda
-    name: AWS Lambda API
-    description: >-
-      Amazon Web Services Lambda API for creating, managing, invoking, and
-      monitoring serverless functions. Core to event-driven, auto-scaling
-      architectures.
-    tags:
-      - AWS
-      - Cloud Native
-      - Event Driven
-      - Scalable Architecture
-      - Serverless
-    humanURL: https://docs.aws.amazon.com/lambda/latest/api/API_Operations.html
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/lambda/latest/api/API_Operations.html
-  - aid: scalable-services:kong-admin
-    name: Kong Admin API
-    description: >-
-      Kong Gateway's RESTful Admin API for managing services, routes, plugins,
-      consumers, upstreams, and certificates. Kong is a widely deployed
-      open-source API gateway for scalable API management.
-    tags:
-      - API Gateway
-      - Load Balancing
-      - Microservices
-      - Plugins
-    humanURL: https://docs.konghq.com/gateway/latest/admin-api/
-    properties:
-      - type: Documentation
-        url: https://docs.konghq.com/gateway/latest/admin-api/
-      - type: GitHub
-        url: https://github.com/Kong/kong
-  - aid: scalable-services:prometheus
-    name: Prometheus HTTP API
-    description: >-
-      Prometheus exposes an HTTP API for querying metrics, metadata, and
-      alerting rules. Essential for observability and autoscaling decisions
-      in scalable service architectures.
-    tags:
-      - Alerts
-      - Metrics
-      - Monitoring
-      - Observability
-    humanURL: https://prometheus.io/docs/prometheus/latest/querying/api/
-    properties:
-      - type: Documentation
-        url: https://prometheus.io/docs/prometheus/latest/querying/api/
-      - type: GitHub
-        url: https://github.com/prometheus/prometheus
-  - aid: scalable-services:knative
-    name: Knative API
-    description: >-
-      Knative provides Kubernetes-based platform APIs for deploying and scaling
-      event-driven serverless workloads. Includes Knative Serving (scale-to-zero)
-      and Knative Eventing (event sourcing and routing).
-    tags:
-      - Cloud Native
-      - Event Driven
-      - Kubernetes
-      - Scalable Architecture
-      - Serverless
-    humanURL: https://knative.dev/docs/
-    properties:
-      - type: Documentation
-        url: https://knative.dev/docs/
-      - type: GitHub
-        url: https://github.com/knative/serving
-  - aid: scalable-services:grpc
-    name: gRPC Reflection API
-    description: >-
-      gRPC server reflection provides information about publicly-accessible
-      gRPC services on a server, enabling discovery and dynamic invocation.
-      gRPC is widely used for high-performance inter-service communication
-      in scalable microservice architectures.
-    tags:
-      - High Performance
-      - Microservices
-      - Protocol Buffers
-      - RPC
-    humanURL: https://grpc.io/docs/
-    properties:
-      - type: Documentation
-        url: https://grpc.io/docs/
-      - type: GitHub
-        url: https://github.com/grpc/grpc
+- aid: scalable-services:envoy-admin
+  name: Envoy Admin API
+  description: >-
+    Envoy Proxy's administration API for inspecting and modifying Envoy runtime configuration, stats,
+    clusters, and listeners. Envoy is the foundational data plane for many service mesh and API gateway
+    deployments.
+  tags:
+  - API Gateway
+  - Load Balancing
+  - Proxy
+  - Service Mesh
+  humanURL: https://www.envoyproxy.io/docs/envoy/latest/operations/admin
+  properties:
+  - type: Documentation
+    url: https://www.envoyproxy.io/docs/envoy/latest/operations/admin
+  - type: GitHub
+    url: https://github.com/envoyproxy/envoy
+- aid: scalable-services:istio
+  name: Istio API
+  description: >-
+    Istio's configuration APIs define traffic management, security policy, and observability for microservice
+    meshes. Expressed as Kubernetes CRDs (VirtualService, DestinationRule, Gateway, etc.).
+  tags:
+  - Kubernetes
+  - Microservices
+  - Observability
+  - Security
+  - Service Mesh
+  humanURL: https://istio.io/latest/docs/reference/config/
+  properties:
+  - type: Documentation
+    url: https://istio.io/latest/docs/reference/config/
+  - type: GitHub
+    url: https://github.com/istio/istio
+- aid: scalable-services:aws-lambda
+  name: AWS Lambda API
+  description: >-
+    Amazon Web Services Lambda API for creating, managing, invoking, and monitoring serverless functions.
+    Core to event-driven, auto-scaling architectures.
+  tags:
+  - AWS
+  - Cloud Native
+  - Event Driven
+  - Scalable Architecture
+  - Serverless
+  humanURL: https://docs.aws.amazon.com/lambda/latest/api/API_Operations.html
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/lambda/latest/api/API_Operations.html
+- aid: scalable-services:kong-admin
+  name: Kong Admin API
+  description: >-
+    Kong Gateway's RESTful Admin API for managing services, routes, plugins, consumers, upstreams, and
+    certificates. Kong is a widely deployed open-source API gateway for scalable API management.
+  tags:
+  - API Gateway
+  - Load Balancing
+  - Microservices
+  - Plugins
+  humanURL: https://docs.konghq.com/gateway/latest/admin-api/
+  properties:
+  - type: Documentation
+    url: https://docs.konghq.com/gateway/latest/admin-api/
+  - type: GitHub
+    url: https://github.com/Kong/kong
+- aid: scalable-services:prometheus
+  name: Prometheus HTTP API
+  description: >-
+    Prometheus exposes an HTTP API for querying metrics, metadata, and alerting rules. Essential for observability
+    and autoscaling decisions in scalable service architectures.
+  tags:
+  - Alerts
+  - Metrics
+  - Monitoring
+  - Observability
+  humanURL: https://prometheus.io/docs/prometheus/latest/querying/api/
+  properties:
+  - type: Documentation
+    url: https://prometheus.io/docs/prometheus/latest/querying/api/
+  - type: GitHub
+    url: https://github.com/prometheus/prometheus
+- aid: scalable-services:knative
+  name: Knative API
+  description: >-
+    Knative provides Kubernetes-based platform APIs for deploying and scaling event-driven serverless
+    workloads. Includes Knative Serving (scale-to-zero) and Knative Eventing (event sourcing and routing).
+  tags:
+  - Cloud Native
+  - Event Driven
+  - Kubernetes
+  - Scalable Architecture
+  - Serverless
+  humanURL: https://knative.dev/docs/
+  properties:
+  - type: Documentation
+    url: https://knative.dev/docs/
+  - type: GitHub
+    url: https://github.com/knative/serving
+- aid: scalable-services:grpc
+  name: gRPC Reflection API
+  description: >-
+    gRPC server reflection provides information about publicly-accessible gRPC services on a server, enabling
+    discovery and dynamic invocation. gRPC is widely used for high-performance inter-service communication
+    in scalable microservice architectures.
+  tags:
+  - High Performance
+  - Microservices
+  - Protocol Buffers
+  - RPC
+  humanURL: https://grpc.io/docs/
+  properties:
+  - type: Documentation
+    url: https://grpc.io/docs/
+  - type: GitHub
+    url: https://github.com/grpc/grpc
+- aid: scalable-services:scalable-services-configmaps-api
+  name: Scalable Services ConfigMaps API
+  description: The ConfigMaps API from Scalable Services — 1 operation(s) for configmaps.
+  humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
+  tags:
+  - ConfigMaps
+  properties:
+  - type: OpenAPI
+    url: openapi/scalable-services-configmaps-api-openapi.yml
+  - type: Documentation
+    url: https://kubernetes.io/docs/reference/kubernetes-api/
+  - type: GettingStarted
+    url: https://kubernetes.io/docs/home/
+  - type: GitHub
+    url: https://github.com/kubernetes/kubernetes
+- aid: scalable-services:scalable-services-namespaces-api
+  name: Scalable Services Namespaces API
+  description: The Namespaces API from Scalable Services — 2 operation(s) for namespaces.
+  humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
+  tags:
+  - Namespaces
+  properties:
+  - type: OpenAPI
+    url: openapi/scalable-services-namespaces-api-openapi.yml
+  - type: Documentation
+    url: https://kubernetes.io/docs/reference/kubernetes-api/
+  - type: GettingStarted
+    url: https://kubernetes.io/docs/home/
+  - type: GitHub
+    url: https://github.com/kubernetes/kubernetes
+- aid: scalable-services:scalable-services-nodes-api
+  name: Scalable Services Nodes API
+  description: The Nodes API from Scalable Services — 2 operation(s) for nodes.
+  humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
+  tags:
+  - Nodes
+  properties:
+  - type: OpenAPI
+    url: openapi/scalable-services-nodes-api-openapi.yml
+  - type: Documentation
+    url: https://kubernetes.io/docs/reference/kubernetes-api/
+  - type: GettingStarted
+    url: https://kubernetes.io/docs/home/
+  - type: GitHub
+    url: https://github.com/kubernetes/kubernetes
+- aid: scalable-services:scalable-services-persistentvolumes-api
+  name: Scalable Services PersistentVolumes API
+  description: The PersistentVolumes API from Scalable Services — 1 operation(s) for persistentvolumes.
+  humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
+  tags:
+  - PersistentVolumes
+  properties:
+  - type: OpenAPI
+    url: openapi/scalable-services-persistentvolumes-api-openapi.yml
+  - type: Documentation
+    url: https://kubernetes.io/docs/reference/kubernetes-api/
+  - type: GettingStarted
+    url: https://kubernetes.io/docs/home/
+  - type: GitHub
+    url: https://github.com/kubernetes/kubernetes
+- aid: scalable-services:scalable-services-pods-api
+  name: Scalable Services Pods API
+  description: The Pods API from Scalable Services — 3 operation(s) for pods.
+  humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
+  tags:
+  - Pods
+  properties:
+  - type: OpenAPI
+    url: openapi/scalable-services-pods-api-openapi.yml
+  - type: Documentation
+    url: https://kubernetes.io/docs/reference/kubernetes-api/
+  - type: GettingStarted
+    url: https://kubernetes.io/docs/home/
+  - type: GitHub
+    url: https://github.com/kubernetes/kubernetes
+- aid: scalable-services:scalable-services-secrets-api
+  name: Scalable Services Secrets API
+  description: The Secrets API from Scalable Services — 1 operation(s) for secrets.
+  humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
+  tags:
+  - Secrets
+  properties:
+  - type: OpenAPI
+    url: openapi/scalable-services-secrets-api-openapi.yml
+  - type: Documentation
+    url: https://kubernetes.io/docs/reference/kubernetes-api/
+  - type: GettingStarted
+    url: https://kubernetes.io/docs/home/
+  - type: GitHub
+    url: https://github.com/kubernetes/kubernetes
+- aid: scalable-services:scalable-services-services-api
+  name: Scalable Services Services API
+  description: The Services API from Scalable Services — 2 operation(s) for services.
+  humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
+  tags:
+  - Services
+  properties:
+  - type: OpenAPI
+    url: openapi/scalable-services-services-api-openapi.yml
+  - type: Documentation
+    url: https://kubernetes.io/docs/reference/kubernetes-api/
+  - type: GettingStarted
+    url: https://kubernetes.io/docs/home/
+  - type: GitHub
+    url: https://github.com/kubernetes/kubernetes
 common:
   - type: AgenticAccess
     url: agentic-access/scalable-services-agentic-access.yml
