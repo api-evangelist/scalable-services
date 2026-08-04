@@ -1,0 +1,26 @@
+{
+  "provider": "scalable-services",
+  "sources": [
+    "scalable-services-configmaps-api-openapi.yml",
+    "scalable-services-namespaces-api-openapi.yml",
+    "scalable-services-nodes-api-openapi.yml",
+    "scalable-services-persistentvolumes-api-openapi.yml",
+    "scalable-services-pods-api-openapi.yml",
+    "scalable-services-secrets-api-openapi.yml",
+    "scalable-services-services-api-openapi.yml"
+  ],
+  "outputs": [
+    "scalable-services-configmaps-api-openapi.yml",
+    "scalable-services-namespaces-api-openapi.yml",
+    "scalable-services-nodes-api-openapi.yml",
+    "scalable-services-persistentvolumes-api-openapi.yml",
+    "scalable-services-pods-api-openapi.yml",
+    "scalable-services-secrets-api-openapi.yml",
+    "scalable-services-services-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
