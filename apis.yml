@@ -24,6 +24,18 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/scalable-services.png
 tags:
   - API Gateway
+  - Cloud-Native
+  - Containers
+  - Distributed Systems
+  - High Availability
+  - Kubernetes
+  - Load Balancing
+  - Microservices
+  - Scalable Architecture
+  - Serverless
+  - Service Mesh
+tags_raw:
+  - API Gateway
   - Cloud Native
   - Containers
   - Distributed Systems
@@ -80,6 +92,12 @@ apis:
     Core to event-driven, auto-scaling architectures.
   tags:
   - AWS
+  - Cloud-Native
+  - Event-Driven
+  - Scalable Architecture
+  - Serverless
+  tags_raw:
+  - AWS
   - Cloud Native
   - Event Driven
   - Scalable Architecture
@@ -126,6 +144,12 @@ apis:
     Knative provides Kubernetes-based platform APIs for deploying and scaling event-driven serverless
     workloads. Includes Knative Serving (scale-to-zero) and Knative Eventing (event sourcing and routing).
   tags:
+  - Cloud-Native
+  - Event-Driven
+  - Kubernetes
+  - Scalable Architecture
+  - Serverless
+  tags_raw:
   - Cloud Native
   - Event Driven
   - Kubernetes
