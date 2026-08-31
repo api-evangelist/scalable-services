@@ -104,7 +104,7 @@ apis:
   tags:
   - AWS
   - Cloud-Native
-  - Event-Driven
+  - Event Driven
   - Scalable Architecture
   - Serverless
   tags_raw:
@@ -156,7 +156,7 @@ apis:
     workloads. Includes Knative Serving (scale-to-zero) and Knative Eventing (event sourcing and routing).
   tags:
   - Cloud-Native
-  - Event-Driven
+  - Event Driven
   - Kubernetes
   - Scalable Architecture
   - Serverless
