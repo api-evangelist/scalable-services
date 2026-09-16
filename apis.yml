@@ -1,13 +1,10 @@
 aid: scalable-services
 name: Scalable Services
-description: >-
-  A curated topic collection covering APIs, patterns, tools, and best practices
-  for designing and operating scalable services. This includes cloud-native
-  microservices, API gateways, load balancers, container orchestration,
-  serverless platforms, service meshes, and the architectural patterns that
-  enable services to scale horizontally and vertically. Relevant to platform
-  engineers, cloud architects, and backend developers building high-traffic,
-  distributed systems.
+description: A curated topic collection covering APIs, patterns, tools, and best practices for designing
+  and operating scalable services. This includes cloud-native microservices, API gateways, load balancers,
+  container orchestration, serverless platforms, service meshes, and the architectural patterns that enable
+  services to scale horizontally and vertically. Relevant to platform engineers, cloud architects, and
+  backend developers building high-traffic, distributed systems.
 deliveryModel:
   model: unknown
   open_source: false
@@ -35,40 +32,39 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/scalable-services.png
 tags:
-  - API Gateway
-  - Cloud-Native
-  - Containers
-  - Distributed Systems
-  - High Availability
-  - Kubernetes
-  - Load Balancing
-  - Microservices
-  - Scalable Architecture
-  - Serverless
-  - Service Mesh
+- API Gateway
+- Cloud-Native
+- Containers
+- Distributed Systems
+- High Availability
+- Kubernetes
+- Load Balancing
+- Microservices
+- Scalable Architecture
+- Serverless
+- Service Mesh
 tags_raw:
-  - API Gateway
-  - Cloud Native
-  - Containers
-  - Distributed Systems
-  - High Availability
-  - Kubernetes
-  - Load Balancing
-  - Microservices
-  - Scalable Architecture
-  - Serverless
-  - Service Mesh
+- API Gateway
+- Cloud Native
+- Containers
+- Distributed Systems
+- High Availability
+- Kubernetes
+- Load Balancing
+- Microservices
+- Scalable Architecture
+- Serverless
+- Service Mesh
 type: Index
 created: '2025-01-15'
-modified: '2026-05-02'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: scalable-services:envoy-admin
   name: Envoy Admin API
-  description: >-
-    Envoy Proxy's administration API for inspecting and modifying Envoy runtime configuration, stats,
-    clusters, and listeners. Envoy is the foundational data plane for many service mesh and API gateway
-    deployments.
+  description: Envoy Proxy's administration API for inspecting and modifying Envoy runtime configuration,
+    stats, clusters, and listeners. Envoy is the foundational data plane for many service mesh and API
+    gateway deployments.
   tags:
   - API Gateway
   - Load Balancing
@@ -82,9 +78,8 @@ apis:
     url: https://github.com/envoyproxy/envoy
 - aid: scalable-services:istio
   name: Istio API
-  description: >-
-    Istio's configuration APIs define traffic management, security policy, and observability for microservice
-    meshes. Expressed as Kubernetes CRDs (VirtualService, DestinationRule, Gateway, etc.).
+  description: Istio's configuration APIs define traffic management, security policy, and observability
+    for microservice meshes. Expressed as Kubernetes CRDs (VirtualService, DestinationRule, Gateway, etc.).
   tags:
   - Kubernetes
   - Microservices
@@ -99,9 +94,8 @@ apis:
     url: https://github.com/istio/istio
 - aid: scalable-services:aws-lambda
   name: AWS Lambda API
-  description: >-
-    Amazon Web Services Lambda API for creating, managing, invoking, and monitoring serverless functions.
-    Core to event-driven, auto-scaling architectures.
+  description: Amazon Web Services Lambda API for creating, managing, invoking, and monitoring serverless
+    functions. Core to event-driven, auto-scaling architectures.
   tags:
   - AWS
   - Cloud-Native
@@ -120,9 +114,8 @@ apis:
     url: https://docs.aws.amazon.com/lambda/latest/api/API_Operations.html
 - aid: scalable-services:kong-admin
   name: Kong Admin API
-  description: >-
-    Kong Gateway's RESTful Admin API for managing services, routes, plugins, consumers, upstreams, and
-    certificates. Kong is a widely deployed open-source API gateway for scalable API management.
+  description: Kong Gateway's RESTful Admin API for managing services, routes, plugins, consumers, upstreams,
+    and certificates. Kong is a widely deployed open-source API gateway for scalable API management.
   tags:
   - API Gateway
   - Load Balancing
@@ -136,9 +129,8 @@ apis:
     url: https://github.com/Kong/kong
 - aid: scalable-services:prometheus
   name: Prometheus HTTP API
-  description: >-
-    Prometheus exposes an HTTP API for querying metrics, metadata, and alerting rules. Essential for observability
-    and autoscaling decisions in scalable service architectures.
+  description: Prometheus exposes an HTTP API for querying metrics, metadata, and alerting rules. Essential
+    for observability and autoscaling decisions in scalable service architectures.
   tags:
   - Alerts
   - Metrics
@@ -152,9 +144,9 @@ apis:
     url: https://github.com/prometheus/prometheus
 - aid: scalable-services:knative
   name: Knative API
-  description: >-
-    Knative provides Kubernetes-based platform APIs for deploying and scaling event-driven serverless
-    workloads. Includes Knative Serving (scale-to-zero) and Knative Eventing (event sourcing and routing).
+  description: Knative provides Kubernetes-based platform APIs for deploying and scaling event-driven
+    serverless workloads. Includes Knative Serving (scale-to-zero) and Knative Eventing (event sourcing
+    and routing).
   tags:
   - Cloud-Native
   - Event-Driven
@@ -175,10 +167,9 @@ apis:
     url: https://github.com/knative/serving
 - aid: scalable-services:grpc
   name: gRPC Reflection API
-  description: >-
-    gRPC server reflection provides information about publicly-accessible gRPC services on a server, enabling
-    discovery and dynamic invocation. gRPC is widely used for high-performance inter-service communication
-    in scalable microservice architectures.
+  description: gRPC server reflection provides information about publicly-accessible gRPC services on
+    a server, enabling discovery and dynamic invocation. gRPC is widely used for high-performance inter-service
+    communication in scalable microservice architectures.
   tags:
   - High Performance
   - Microservices
@@ -281,7 +272,7 @@ apis:
   - type: GitHub
     url: https://github.com/kubernetes/kubernetes
 - aid: scalable-services:scalable-services-services-api
-  name: Scalable Services Services API
+  name: Scalable Services API
   description: The Services API from Scalable Services — 2 operation(s) for services.
   humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
   tags:
@@ -296,48 +287,48 @@ apis:
   - type: GitHub
     url: https://github.com/kubernetes/kubernetes
 common:
-  - type: AgenticAccess
-    url: agentic-access/scalable-services-agentic-access.yml
-  - type: VulnerabilityDisclosure
-    url: security/scalable-services-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/scalable-services-domain-security.yml
-  - type: Authentication
-    url: authentication/scalable-services-authentication.yml
-  - type: Documentation
-    url: https://kubernetes.io/docs/concepts/architecture/
-    name: Kubernetes Architecture Concepts
-  - type: Guide
-    url: https://microservices.io/patterns/index.html
-    name: Microservices Patterns
-  - type: Guide
-    url: https://www.cncf.io/projects/
-    name: CNCF Landscape Projects
-  - type: Guide
-    url: https://istio.io/latest/about/service-mesh/
-    name: What is a Service Mesh?
-  - type: Guide
-    url: https://www.envoyproxy.io/learn/service-mesh
-    name: Envoy Service Mesh Guide
-  - type: JSONSchema
-    url: https://github.com/api-evangelist/scalable-services/blob/main/json-schema/scalable-services-service-schema.json
-    name: Scalable Service JSON Schema
-  - type: JSONStructure
-    url: https://github.com/api-evangelist/scalable-services/blob/main/json-structure/scalable-services-service-structure.json
-    name: Scalable Service JSON Structure
-  - type: JSONLDContext
-    url: https://github.com/api-evangelist/scalable-services/blob/main/json-ld/scalable-services-context.jsonld
-    name: Scalable Services JSON-LD Context
-  - type: Vocabulary
-    url: https://github.com/api-evangelist/scalable-services/blob/main/vocabulary/scalable-services-vocabulary.yml
-    name: Scalable Services Vocabulary
-  - type: Examples
-    url: https://github.com/api-evangelist/scalable-services/blob/main/examples/scalable-services-kubernetes-hpa-example.json
-    name: Kubernetes HPA Example
-  - type: Examples
-    url: https://github.com/api-evangelist/scalable-services/blob/main/examples/scalable-services-kong-plugin-example.json
-    name: Kong Rate Limiting Plugin Example
+- type: AgenticAccess
+  url: agentic-access/scalable-services-agentic-access.yml
+- type: VulnerabilityDisclosure
+  url: security/scalable-services-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/scalable-services-domain-security.yml
+- type: Authentication
+  url: authentication/scalable-services-authentication.yml
+- type: Documentation
+  url: https://kubernetes.io/docs/concepts/architecture/
+  name: Kubernetes Architecture Concepts
+- type: Guide
+  url: https://microservices.io/patterns/index.html
+  name: Microservices Patterns
+- type: Guide
+  url: https://www.cncf.io/projects/
+  name: CNCF Landscape Projects
+- type: Guide
+  url: https://istio.io/latest/about/service-mesh/
+  name: What is a Service Mesh?
+- type: Guide
+  url: https://www.envoyproxy.io/learn/service-mesh
+  name: Envoy Service Mesh Guide
+- type: JSONSchema
+  url: https://github.com/api-evangelist/scalable-services/blob/main/json-schema/scalable-services-service-schema.json
+  name: Scalable Service JSON Schema
+- type: JSONStructure
+  url: https://github.com/api-evangelist/scalable-services/blob/main/json-structure/scalable-services-service-structure.json
+  name: Scalable Service JSON Structure
+- type: JSONLDContext
+  url: https://github.com/api-evangelist/scalable-services/blob/main/json-ld/scalable-services-context.jsonld
+  name: Scalable Services JSON-LD Context
+- type: Vocabulary
+  url: https://github.com/api-evangelist/scalable-services/blob/main/vocabulary/scalable-services-vocabulary.yml
+  name: Scalable Services Vocabulary
+- type: Examples
+  url: https://github.com/api-evangelist/scalable-services/blob/main/examples/scalable-services-kubernetes-hpa-example.json
+  name: Kubernetes HPA Example
+- type: Examples
+  url: https://github.com/api-evangelist/scalable-services/blob/main/examples/scalable-services-kong-plugin-example.json
+  name: Kong Rate Limiting Plugin Example
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-    url: https://apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
