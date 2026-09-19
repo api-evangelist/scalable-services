@@ -216,6 +216,8 @@ apis:
   description: The Nodes API from Scalable Services — 2 operation(s) for nodes.
   humanURL: https://kubernetes.io/docs/reference/kubernetes-api/
   tags:
+  - Node
+  tags_raw:
   - Nodes
   properties:
   - type: OpenAPI
