@@ -1,13 +1,7 @@
 {
   "provider": "scalable-services",
   "sources": [
-    "scalable-services-configmaps-api-openapi.yml",
-    "scalable-services-namespaces-api-openapi.yml",
-    "scalable-services-nodes-api-openapi.yml",
-    "scalable-services-persistentvolumes-api-openapi.yml",
-    "scalable-services-pods-api-openapi.yml",
-    "scalable-services-secrets-api-openapi.yml",
-    "scalable-services-services-api-openapi.yml"
+    "_original/scalable-services-openapi.yml"
   ],
   "outputs": [
     "scalable-services-configmaps-api-openapi.yml",
@@ -21,6 +15,25 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "scalable-services-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "scalable-services-openapi.yml: declared missing tag: ConfigMaps",
+    "scalable-services-openapi.yml: declared missing tag: Namespaces",
+    "scalable-services-openapi.yml: declared missing tag: Nodes",
+    "scalable-services-openapi.yml: declared missing tag: PersistentVolumes",
+    "scalable-services-openapi.yml: declared missing tag: Pods",
+    "scalable-services-openapi.yml: declared missing tag: Secrets",
+    "scalable-services-openapi.yml: declared missing tag: Services",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "scalable-services-configmaps-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-services-namespaces-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-services-nodes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-services-persistentvolumes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-services-pods-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-services-secrets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "scalable-services-services-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

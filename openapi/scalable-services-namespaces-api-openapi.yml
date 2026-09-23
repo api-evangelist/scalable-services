@@ -1,23 +1,9 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Kubernetes Core API (v1) ConfigMaps Namespaces API
+  title: Kubernetes Core API (v1) Namespaces API
   description: 'The Kubernetes API is served by the kube-apiserver and exposes a uniform,
 
-    versioned REST surface for cluster resources. This OpenAPI is a hand-curated
-
-    subset of the core/v1 group covering the most common workloads — pods,
-
-    namespaces, services, configmaps, secrets, nodes, and persistent volumes.
-
-    Authentication is per-cluster (bearer tokens, client certs, OIDC). The base
-
-    URL is the API server endpoint of a given cluster (no single public base).
-
-    This file is an API Evangelist research artifact for the scalable-services
-
-    topic.
-
-    '
+    versioned REST surface for cluster resources.'
   version: 1.0.0
   contact:
     name: API Evangelist
