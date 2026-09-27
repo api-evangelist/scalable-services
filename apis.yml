@@ -1,5 +1,6 @@
 aid: scalable-services
 name: Scalable Services
+kind: topic
 description: A curated topic collection covering APIs, patterns, tools, and best practices for designing
   and operating scalable services. This includes cloud-native microservices, API gateways, load balancers,
   container orchestration, serverless platforms, service meshes, and the architectural patterns that enable
@@ -7,14 +8,22 @@ description: A curated topic collection covering APIs, patterns, tools, and best
   backend developers building high-traffic, distributed systems.
 deliveryModel:
   model: unknown
-  open_source: false
+  license_evidence:
+    not_product:
+    - envoyproxy/envoy
+    - grpc/grpc
+    - istio/istio
+    - knative/serving
+    - kong/kong
+  open_source: unknown
   commercial: false
   callable_host: false
   label: Delivery model not determined — needs a product licence on record
   confidence: low
   source:
   - openapi
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
