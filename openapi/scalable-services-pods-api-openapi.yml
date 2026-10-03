@@ -92,14 +92,14 @@ paths:
           description: Pod deleted.
 components:
   parameters:
-    Name:
-      name: name
+    Namespace:
+      name: namespace
       in: path
       required: true
       schema:
         type: string
-    Namespace:
-      name: namespace
+    Name:
+      name: name
       in: path
       required: true
       schema:
