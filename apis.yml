@@ -298,6 +298,9 @@ apis:
   - type: GitHub
     url: https://github.com/kubernetes/kubernetes
 common:
+- type: CapabilityMap
+  url: capabilities/scalable-services-capability-edges.yml
+  name: Scalable Services Business Capability Map
 - type: AgenticAccess
   url: agentic-access/scalable-services-agentic-access.yml
 - type: VulnerabilityDisclosure

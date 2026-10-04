@@ -1,0 +1,51 @@
+slug: scalable-services
+provider: Scalable Services
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 4
+edges:
+- tag: Nodes
+  spec_file: scalable-services-nodes-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: GET /api/v1/nodes  listNodes  List nodes
+  reason: Kubernetes nodes are the compute machines of the cluster; reading them is compute infrastructure
+    management (BC-600.50 explicitly covers compute, storage, network, cloud infrastructure).
+- tag: PersistentVolumes
+  spec_file: scalable-services-persistentvolumes-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: POST /api/v1/persistentvolumes  createPersistentVolume  Create a persistent volume
+  reason: Persistent volumes are cluster storage resources; provisioning them is storage infrastructure
+    management, which BC-600.50 explicitly names.
+- tag: Secrets
+  spec_file: scalable-services-secrets-api-openapi.yml
+  capability_id: BC-4210.60
+  capability_id_l1: BC-4210
+  capability_name: Configuration & Secrets Management
+  confidence: 0.75
+  evidence: POST /api/v1/namespaces/{namespace}/secrets  createSecret  Create a secret
+  reason: Kubernetes Secrets store credentials and sensitive runtime values consumed by services, directly
+    matching Configuration & Secrets Management.
+- tag: ConfigMaps
+  spec_file: scalable-services-configmaps-api-openapi.yml
+  capability_id: BC-4210.60
+  capability_id_l1: BC-4210
+  capability_name: Configuration & Secrets Management
+  confidence: 0.7
+  evidence: GET /api/v1/namespaces/{namespace}/configmaps  listConfigMaps  List configmaps in a namespace
+  reason: Kubernetes ConfigMaps hold runtime configuration values consumed by services, matching Configuration
+    & Secrets Management. Thin surface (list/create only) so moderate confidence.
